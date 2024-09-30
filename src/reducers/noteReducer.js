@@ -3,7 +3,8 @@ import { createStore } from "redux";
 const noteReducer = (state = [], action) => {
 	switch (action.type) {
 		case "NEW_NOTE": {
-			return state.concat(action.payload);
+			// modified to use array spread syntax
+			return [...state, action.payload]; // before: return state.concat(action.payload)
 		}
 		case "TOGGLE_IMPORTANCE": {
 			const id = action.payload.id;
