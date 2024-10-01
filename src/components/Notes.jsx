@@ -19,7 +19,7 @@ const Notes = () => {
 				<Note
 					key={note.id}
 					note={note}
-					handleClick={() => dispatch(toggleImportanceOf(id))}
+					handleClick={() => dispatch(toggleImportanceOf(note.id))} // fixed passed value from id to note.id
 				/>
 			))}
 		</ul>
