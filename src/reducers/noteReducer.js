@@ -1,4 +1,19 @@
-const noteReducer = (state = [], action) => {
+// Initial state
+const initialState = [
+	{
+		content: "reducer defines how redux store works",
+		important: true,
+		id: 1,
+	},
+	{
+		content: "state of store can contain any data",
+		important: false,
+		id: 2,
+	},
+];
+
+// Modified state to use initialState as default
+const noteReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case "NEW_NOTE": {
 			// modified to use array spread syntax
