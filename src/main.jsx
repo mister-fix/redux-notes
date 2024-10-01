@@ -36,7 +36,7 @@ store.dispatch(
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
 		<Provider store={store}>
-			<div />
+			<App /> {/* Replaced empty div with the App component */}
 		</Provider>
 	</StrictMode>
 );
